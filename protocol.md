@@ -1,6 +1,6 @@
 ## This is the protocol for communication between cumulusd (daemon) and cumulus (cloud)
 
-So cumulusd is installed on the host computer and will now connect to the global cumulus server that is sitting on the cloud
+So cumulusd is installed on the _host computer and will now connect to the global cumulus server that is sitting on the cloud
 
 The cumulus service on the cloud is expecting new connections from cumulusd (daemon) and will respond accordingly with some data parameters that will have some meaning for both of these parties. We will call it **commands**
 
@@ -8,11 +8,11 @@ Communication will happen over the SSL Sockets with TLS support.
 
 We will now define some keywords for later use
 
-1. **daemon_id** - It is the unique ID of the daemon installed on the host computer. On installation, this will be auto generated.
+1. **daemon_id** - It is the unique ID of the daemon installed on the _host computer. On installation, this will be auto generated.
 2. **user_id** - Upon installation of the daemon, user will need to login to cumulus (Google, Email, etc). After successful login, each user will have their own unique user_id.
 3. **token** - Upon successful authentication, token will be saved and will be used to authorize with cumulus.
-4. **content_port** - This is the port that is opened on the host computer, that is listening. cumulusd will route the incoming traffic to this port, and will also route the outgoing traffic from this port to cumulus.
-5. **daemon_socket** - Upon successfull authentication and connection with the cumulus, the host computer will have a socket, created by cumulusd, that will be used to communicate and route traffic to-from cumulus.
+4. **content_port** - This is the _port that is opened on the _host computer, that is listening. cumulusd will route the incoming traffic to this _port, and will also route the outgoing traffic from this _port to cumulus.
+5. **daemon_socket** - Upon successfull authentication and connection with the cumulus, the _host computer will have a socket, created by cumulusd, that will be used to communicate and route traffic to-from cumulus.
 
 *These protocols might change according to the need of the implementation. This is currently for guidance of the development process*
 
